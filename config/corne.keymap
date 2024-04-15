@@ -28,7 +28,7 @@
 
         esc {
             bindings = <&kp ESCAPE>;
-            key-positions = <0 1>;
+            key-positions = <1 2>;
             layers = <0 1 2 3>;
         };
 
@@ -82,7 +82,7 @@
 
         settings {
             bindings = <&to 4>;
-            key-positions = <0 1 2>;
+            key-positions = <1 2 3>;
             layers = <0>;
         };
 
@@ -112,7 +112,7 @@
 
         capsword {
             bindings = <&caps_word>;
-            key-positions = <29 28>;
+            key-positions = <34 33>;
             layers = <0>;
         };
     };
@@ -190,47 +190,46 @@
 
         colemak_base {
             bindings = <
-&none &kp Q           &kp W           &kp F        &kp P             &kp B            &kp J      &kp L              &kp U        &kp Y            &mt UNDER MINUS &none
-&none &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &kp G            &kp M      &mt RIGHT_SHIFT N  &mt RCTRL E  &mt RIGHT_ALT I  &mt LEFT_GUI O &none
-&none &lt 2 Z         &kp X           &kp C        &kp D             &kp V            &kp SLASH  &mt RET K          &kp H        &mt COLON COMMA  &lt 2 DOT &none
-                                &kp A             &lt 1 SPACE       &kp BACKSPACE    &lt 3 TAB  &lt 1 RET &kp B
+&none  &mt ESCAPE Q    &kp W           &kp F           &kp P             &kp B            &kp J      &kp L              &kp U        &kp Y            &mt UNDER MINUS  &none
+&none  &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LCTRL S     &mt LEFT_SHIFT T  &kp G            &kp M      &mt RIGHT_SHIFT N  &mt RCTRL E  &mt RIGHT_ALT I  &mt LEFT_GUI O   &none
+&none  &lt 2 Z         &kp X           &kp C           &kp D             &kp V            &kp SLASH  &mt RET K          &kp H        &mt COLON COMMA  &lt 2 DOT        &none
+                                       &sk LEFT_SHIFT  &lt 1 SPACE       &kp BACKSPACE    &lt 3 TAB  &lt 1 RET          &sl 2
             >;
         };
 
         symbol {
             bindings = <
-&none &kp HASH            &kp AT              &kp LESS_THAN         &kp GREATER_THAN       &kp TILDE           &kp MINUS  &kp LEFT_BRACE                    &kp RIGHT_BRACE              &kp GRAVE                   &kp COLON &none  
-&none &mt LEFT_GUI CARET  &mt LEFT_ALT EQUAL  &mt LCTRL UNDERSCORE  &mt LEFT_SHIFT DOLLAR  &kp ASTERISK        &kp PLUS   &mt RIGHT_SHIFT LEFT_PARENTHESIS  &mt RCTRL RIGHT_PARENTHESIS  &mt RIGHT_ALT LEFT_BRACKET  &mt RIGHT_GUI RIGHT_BRACKET &none
-&none &kp BACKSLASH       &kp PIPE            &kp PRCNT             &trans                 &kp SINGLE_QUOTE    &kp DQT    &kp EXCL                          &kp AMPS                     &kp UNDER                   &kp SLASH &none
-                                        &trans                &trans                 &kp DELETE          &to 1      &trans &trans
+&none  &kp HASH            &kp AT              &kp LESS_THAN         &kp GREATER_THAN       &kp TILDE           &kp MINUS  &kp LEFT_BRACE                    &kp RIGHT_BRACE              &kp GRAVE                   &kp COLON                    &none
+&none  &mt LEFT_GUI CARET  &mt LEFT_ALT EQUAL  &mt LCTRL UNDERSCORE  &mt LEFT_SHIFT DOLLAR  &kp ASTERISK        &kp PLUS   &mt RIGHT_SHIFT LEFT_PARENTHESIS  &mt RCTRL RIGHT_PARENTHESIS  &mt RIGHT_ALT LEFT_BRACKET  &mt RIGHT_GUI RIGHT_BRACKET  &none
+&none  &kp BACKSLASH       &kp PIPE            &kp PRCNT             &trans                 &kp SINGLE_QUOTE    &kp DQT    &kp EXCL                          &kp AMPS                     &kp UNDER                   &kp SLASH                    &none
+                                               &trans                &trans                 &kp DELETE          &to 1      &trans                            &trans
             >;
         };
 
         number-and-fn {
             bindings = <
-&none &kp N1             &kp N2       &kp N3         &kp N4             &kp N5        &kp N6  &kp N7                &kp N8             &kp N9                   &kp N0 &none 
-&none &mt LEFT_GUI EXCL  &mt LALT AT  &mt LCTRL SQT  &mt LEFT_SHIFT F4  &trans        &trans  &mt RIGHT_SHIFT HOME  &mt RCTRL PAGE_UP  &mt RIGHT_ALT PAGE_DOWN  &mt RIGHT_GUI END &none
-&none &kp F1             &kp F2       &kp F3         &kp F4             &kp F5        &kp F6  &kp F7                &kp F8             &kp F11                  &kp F12 &none 
-                                &trans         &trans             &kp DELETE    &to 2   &trans &trans
-
+&none  &kp N1             &kp N2       &kp N3         &kp N4             &kp N5        &kp N6  &kp N7                &kp N8             &kp N9                   &kp N0             &none
+&none  &mt LEFT_GUI EXCL  &mt LALT AT  &mt LCTRL SQT  &mt LEFT_SHIFT F4  &trans        &trans  &mt RIGHT_SHIFT HOME  &mt RCTRL PAGE_UP  &mt RIGHT_ALT PAGE_DOWN  &mt RIGHT_GUI END  &none
+&none  &kp F1             &kp F2       &kp F3         &kp F4             &kp F5        &kp F6  &kp F7                &kp F8             &kp F11                  &kp F12            &none
+                                       &trans         &trans             &kp DELETE    &to 2   &trans                &trans
             >;
         };
 
         numpad_arrow {
             bindings = <
-&none &to 0   &trans    &kp UP_ARROW  &trans     &trans         &kp FSLH      &kp N7  &kp N8  &kp N9  &kp MINUS &none 
-&none &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans         &kp ASTERISK  &kp N4  &kp N5  &kp N6  &kp PLUS  &none 
-&none &trans  &trans    &trans        &trans     &trans         &kp N0        &kp N1  &kp N2  &kp N3  &kp ENTER &none 
-                   &trans       &kp SPACE  &key_repeat    &to 3         &trans &trans
+&none  &to 0   &trans    &kp UP_ARROW  &trans     &trans         &kp FSLH      &kp N7  &kp N8  &kp N9  &kp MINUS  &none
+&none  &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans         &kp ASTERISK  &kp N4  &kp N5  &kp N6  &kp PLUS   &none
+&none  &trans  &trans    &trans        &trans     &trans         &kp N0        &kp N1  &kp N2  &kp N3  &kp ENTER  &none
+                         &trans        &kp SPACE  &key_repeat    &to 3         &trans  &trans
             >;
         };
 
         settings {
             bindings = <
-&none &to 0  &none  &none       &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &none  &none  &kp A &none 
-&none &none  &none  &none       &none         &none           &none         &none         &none  &none  &none &none 
-&none &none  &none  &bt BT_CLR  &none         &tog 0          &to 0         &none         &none  &none  &none &none 
-             &none             &none         &none           &none         &none &none   
+&none  &to 0  &none  &none       &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3  &none  &none  &kp A  &none
+&none  &none  &none  &none       &none         &none           &none         &none         &none  &none  &none  &none
+&none  &none  &none  &bt BT_CLR  &none         &tog 0          &to 0         &none         &none  &none  &none  &none
+                     &none       &none         &none           &none         &none         &none
             >;
         };
     };
