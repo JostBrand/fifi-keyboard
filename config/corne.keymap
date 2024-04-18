@@ -93,8 +93,8 @@
         };
 
         alt_ret {
-            bindings = <&mt LS(LCTRL) RET>;
-            key-positions = <16 15>;
+            bindings = <&kp RET>;
+            key-positions = <16 17>;
             layers = <0 1 2 3>;
         };
 
@@ -105,26 +105,12 @@
         };
 
         alt_tab {
-            bindings = <&mt RC(RSHFT) TAB>;
-            key-positions = <19 20>;
+            bindings = <&kp TAB>;
+            key-positions = <19 18>;
         };
     };
 
     macros {
-        the: the {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp T &kp H &kp E>;
-            label = "THE";
-        };
-
-        and: and {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp A &kp N &kp D>;
-            label = "AND";
-        };
-
         llm_prompt: llm_prompt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -177,14 +163,34 @@
             continue-list = <COLON MINUS KP_MINUS SLASH BACKSLASH>;
         };
 
-        experimental_ae: experimental_ae {
+        alt_a: alt_a {
             compatible = "zmk,behavior-hold-tap";
-            label = "EXPERIMENTAL_AE";
+            label = "ALT_A";
             bindings = <&kp>, <&german_ae>;
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <230>;
+        };
+
+        alt_o: alt_o {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ALT_O";
+            bindings = <&kp>, <&german_oe>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <230>;
+            flavor = "tap-preferred";
+        };
+
+        alt_s: alt_s {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ALT_S";
+            bindings = <&kp>, <&german_ss>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <230>;
+            flavor = "tap-preferred";
         };
     };
 
@@ -193,10 +199,10 @@
 
         colemak_base {
             bindings = <
-&none  &mt ESCAPE Q                 &kp W           &kp F        &kp P             &kp B          &kp J         &mt SEMI L         &kp U        &kp Y            &mt UNDER MINUS  &none
-&none  &experimental_ae LEFT_GUI 0  &mt LEFT_ALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &kp G          &kp M         &mt RIGHT_SHIFT N  &mt RCTRL E  &mt RIGHT_ALT I  &mt LEFT_GUI O   &none
-&none  &lt 2 Z                      &kp X           &kp C        &kp D             &kp V          &kp SLASH     &kp K              &kp H        &mt COLON COMMA  &lt 2 DOT        &none
-                                                    &key_repeat  &lt 1 BACKSPACE   &lt 2 SPACE    &lt 3 RETURN  &lt 1 TAB          &sl 2
+&none  &mt ESCAPE Q       &kp W           &kp F           &kp P             &kp B          &kp J         &mt SEMI L         &german_ue   &kp Y            &mt UNDER MINUS     &none
+&none  &alt_a LEFT_GUI 0  &mt LEFT_ALT R  &alt_s LCTRL 0  &mt LEFT_SHIFT T  &kp G          &kp M         &mt RIGHT_SHIFT N  &mt RCTRL E  &mt RIGHT_ALT I  &alt_o RIGHT_GUI 0  &none
+&none  &lt 2 Z            &kp X           &kp C           &kp D             &kp V          &kp SLASH     &kp K              &kp H        &mt COLON COMMA  &lt 2 DOT           &none
+                                          &key_repeat     &lt 1 BACKSPACE   &lt 2 SPACE    &lt 3 RETURN  &lt 1 TAB          &sl 2
             >;
         };
 
