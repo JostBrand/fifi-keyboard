@@ -93,8 +93,8 @@
         };
 
         alt_ret {
-            bindings = <&kp RET>;
-            key-positions = <16 17>;
+            bindings = <&mt LS(LCTRL) RET>;
+            key-positions = <16 15>;
             layers = <0 1 2 3>;
         };
 
@@ -104,9 +104,9 @@
             layers = <0>;
         };
 
-        and {
-            bindings = <&and>;
-            key-positions = <37 13>;
+        alt_tab {
+            bindings = <&mt RC(RSHFT) TAB>;
+            key-positions = <19 20>;
         };
     };
 
