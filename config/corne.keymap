@@ -86,21 +86,9 @@
             layers = <0>;
         };
 
-        and {
-            bindings = <&and>;
-            key-positions = <38 13>;
-            layers = <0>;
-        };
-
-        the {
-            bindings = <&the>;
-            key-positions = <38 16>;
-            layers = <0>;
-        };
-
         improve_prompt {
             bindings = <&llm_prompt>;
-            key-positions = <38 21>;
+            key-positions = <21 37>;
             layers = <0>;
         };
 
@@ -114,6 +102,11 @@
             bindings = <&custom_capsword>;
             key-positions = <34 33>;
             layers = <0>;
+        };
+
+        and {
+            bindings = <&and>;
+            key-positions = <37 13>;
         };
     };
 
