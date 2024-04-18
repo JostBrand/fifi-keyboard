@@ -160,7 +160,7 @@
             compatible = "zmk,behavior-caps-word";
             label = "CUSTOM_CAPSWORD";
             #binding-cells = <0>;
-            continue-list = <COLON MINUS KP_MINUS SLASH BACKSLASH>;
+            continue-list = <COLON MINUS KP_MINUS SLASH BACKSLASH UNDERSCORE UNDER>;
         };
 
         alt_a: alt_a {
