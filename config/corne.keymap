@@ -94,7 +94,7 @@
 
         alt_ret {
             bindings = <&kp RET>;
-            key-positions = <15 16>;
+            key-positions = <16 17>;
             layers = <0 1 2 3>;
         };
 
@@ -183,7 +183,7 @@
 
         colemak_base {
             bindings = <
-&none  &mt ESCAPE Q    &kp W           &kp F        &kp P             &kp B          &kp J         &kp L              &kp U        &kp Y            &mt UNDER MINUS  &none
+&none  &mt ESCAPE Q    &kp W           &kp F        &kp P             &kp B          &kp J         &mt SEMI L         &kp U        &kp Y            &mt UNDER MINUS  &none
 &none  &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &kp G          &kp M         &mt RIGHT_SHIFT N  &mt RCTRL E  &mt RIGHT_ALT I  &mt LEFT_GUI O   &none
 &none  &lt 2 Z         &kp X           &kp C        &kp D             &kp V          &kp SLASH     &kp K              &kp H        &mt COLON COMMA  &lt 2 DOT        &none
                                        &key_repeat  &lt 1 BACKSPACE   &lt 2 SPACE    &lt 3 RETURN  &lt 1 TAB          &sl 2
@@ -194,7 +194,7 @@
             bindings = <
 &none  &kp HASH            &kp AT              &kp LESS_THAN         &kp GREATER_THAN       &kp TILDE           &kp MINUS  &kp LEFT_BRACE                    &kp RIGHT_BRACE              &kp GRAVE                   &kp COLON                    &none
 &none  &mt LEFT_GUI CARET  &mt LEFT_ALT EQUAL  &mt LCTRL UNDERSCORE  &mt LEFT_SHIFT DOLLAR  &kp ASTERISK        &kp PLUS   &mt RIGHT_SHIFT LEFT_PARENTHESIS  &mt RCTRL RIGHT_PARENTHESIS  &mt RIGHT_ALT LEFT_BRACKET  &mt RIGHT_GUI RIGHT_BRACKET  &none
-&none  &kp BACKSLASH       &kp PIPE            &kp PRCNT             &trans                 &kp SINGLE_QUOTE    &kp DQT    &kp EXCL                          &kp AMPS                     &kp UNDER                   &kp SLASH                    &none
+&none  &kp BACKSLASH       &kp PIPE            &kp PRCNT             &kp SEMI               &kp SINGLE_QUOTE    &kp DQT    &kp EXCL                          &kp AMPS                     &kp UNDER                   &kp SLASH                    &none
                                                &trans                &trans                 &kp DELETE          &trans     &trans                            &trans
             >;
         };
@@ -210,10 +210,10 @@
 
         numpad_arrow {
             bindings = <
-&none  &to 0   &trans    &kp UP_ARROW  &trans     &trans         &kp FSLH      &kp N7  &kp N8  &kp N9  &kp MINUS  &none
-&none  &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans         &kp ASTERISK  &kp N4  &kp N5  &kp N6  &kp PLUS   &none
-&none  &trans  &trans    &trans        &trans     &trans         &kp N0        &kp N1  &kp N2  &kp N3  &kp ENTER  &none
-                         &trans        &kp SPACE  &key_repeat    &to 3         &trans  &trans
+&none  &to 0   &trans    &kp UP_ARROW  &trans     &trans        &kp FSLH      &kp N7  &kp N8  &kp N9  &kp MINUS  &none
+&none  &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans        &kp ASTERISK  &kp N4  &kp N5  &kp N6  &kp PLUS   &none
+&none  &trans  &trans    &trans        &trans     &trans        &kp N0        &kp N1  &kp N2  &kp N3  &kp ENTER  &none
+                         &trans        &kp SPACE  &kp DELETE    &to 3         &trans  &trans
             >;
         };
 
