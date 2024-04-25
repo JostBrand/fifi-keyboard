@@ -20,6 +20,7 @@
 
     tapping-term-ms = <230>;
     flavor = "balanced";
+    quick-tap-ms = <180>;
 };
 
 / {
@@ -199,6 +200,17 @@
             #binding-cells = <0>;
             bindings = <&sk LEFT_SHIFT>, <&mo 3>;
         };
+
+        exp: exp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "EXP";
+            bindings = <&lt>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <230>;
+            quick-tap-ms = <200>;
+            flavor = "balanced";
+        };
     };
 
     keymap {
@@ -206,10 +218,10 @@
 
         colemak_base {
             bindings = <
-&none  &mt ESCAPE Q       &kp W           &kp F           &kp P             &kp B          &kp J       &mt SEMI L         &german_ue             &kp Y            &mt UNDER MINUS     &none
-&none  &alt_a LEFT_GUI 0  &mt LEFT_ALT R  &alt_s LCTRL 0  &mt LEFT_SHIFT T  &kp G          &kp M       &mt RIGHT_SHIFT N  &mt RCTRL E            &mt RIGHT_ALT I  &alt_o RIGHT_GUI 0  &none
-&none  &lt 2 Z            &kp X           &kp C           &kp D             &kp V          &kp SLASH   &kp K              &kp H                  &mt COLON COMMA  &lt 2 DOT           &none
-                                          &key_repeat     &lt 1 BACKSPACE   &lt 2 SPACE    &alt_shift  &lt 1 TAB          &kp LA(LC(LEFT_META))
+&none  &mt ESCAPE Q       &kp W           &kp F           &kp P             &kp B          &kp J              &mt SEMI L         &german_ue             &kp Y            &mt UNDER MINUS     &none
+&none  &alt_a LEFT_GUI 0  &mt LEFT_ALT R  &alt_s LCTRL 0  &mt LEFT_SHIFT T  &kp G          &kp M              &mt RIGHT_SHIFT N  &mt RCTRL E            &mt RIGHT_ALT I  &alt_o RIGHT_GUI 0  &none
+&none  &lt 2 Z            &kp X           &kp C           &kp D             &kp V          &kp SLASH          &kp K              &kp H                  &mt COLON COMMA  &lt 2 DOT           &none
+                                          &key_repeat     &lt 1 BACKSPACE   &lt 2 SPACE    &exp 3 LEFT_SHIFT  &lt 1 TAB          &kp LA(LC(LEFT_META))
             >;
         };
 
@@ -236,7 +248,7 @@
 &none  &to 0   &trans    &kp UP_ARROW  &trans     &trans        &kp FSLH      &kp N7  &kp N8  &kp N9  &kp MINUS  &none
 &none  &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans        &kp ASTERISK  &kp N4  &kp N5  &kp N6  &kp PLUS   &none
 &none  &trans  &trans    &trans        &trans     &trans        &kp N0        &kp N1  &kp N2  &kp N3  &kp ENTER  &none
-                         &trans        &kp SPACE  &kp DELETE    &to 3         &trans  &trans
+                         &trans        &trans     &kp DELETE    &trans        &trans  &trans
             >;
         };
 
