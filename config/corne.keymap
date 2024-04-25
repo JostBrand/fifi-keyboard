@@ -204,7 +204,7 @@
         exp: exp {
             compatible = "zmk,behavior-hold-tap";
             label = "EXP";
-            bindings = <&lt>, <&sk>;
+            bindings = <&mo>, <&sk>;
 
             #binding-cells = <2>;
             tapping-term-ms = <230>;
