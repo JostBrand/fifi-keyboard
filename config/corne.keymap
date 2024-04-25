@@ -194,22 +194,13 @@
             flavor = "tap-preferred";
         };
 
-        alt_shift: alt_shift {
-            compatible = "zmk,behavior-tap-dance";
-            label = "ALT_SHIFT";
-            #binding-cells = <0>;
-            bindings = <&sk LEFT_SHIFT>, <&mo 3>;
-        };
-
         exp: exp {
             compatible = "zmk,behavior-hold-tap";
             label = "EXP";
             bindings = <&mo>, <&sk>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <230>;
-            quick-tap-ms = <200>;
-            flavor = "balanced";
+            tapping-term-ms = <200>;
         };
     };
 
