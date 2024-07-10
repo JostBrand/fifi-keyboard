@@ -238,10 +238,10 @@
 
         numpad_arrow {
             bindings = <
-&none  &to 0   &trans    &kp UP_ARROW  &trans     &trans        &kp FSLH      &kp N7  &kp N8  &kp N9  &kp MINUS  &none
-&none  &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans        &kp ASTERISK  &kp N4  &kp N5  &kp N6  &kp PLUS   &none
-&none  &trans  &trans    &trans        &trans     &trans        &kp N0        &kp N1  &kp N2  &kp N3  &kp ENTER  &none
-                         &trans        &trans     &kp DELETE    &trans        &trans  &trans
+&none  &to 0   &trans    &kp UP_ARROW  &trans     &trans        &kp FSLH      &kp N7              &kp N8        &kp N9       &kp MINUS      &none
+&none  &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans        &kp ASTERISK  &mt RIGHT_SHIFT N4  &mt RCTRL N5  &mt RALT N6  &mt RWIN PLUS  &none
+&none  &trans  &trans    &trans        &trans     &trans        &kp N0        &kp N1              &kp N2        &kp N3       &kp ENTER      &none
+                         &trans        &trans     &kp DELETE    &trans        &trans              &trans
             >;
         };
 
