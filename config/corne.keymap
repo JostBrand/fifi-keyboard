@@ -161,7 +161,7 @@
             compatible = "zmk,behavior-caps-word";
             label = "CUSTOM_CAPSWORD";
             #binding-cells = <0>;
-            continue-list = <COLON MINUS KP_MINUS SLASH BACKSLASH UNDERSCORE UNDER>;
+            continue-list = <COLON MINUS KP_MINUS SLASH BACKSLASH UNDERSCORE UNDER BACKSPACE>;
         };
 
         alt_a: alt_a {
@@ -223,25 +223,25 @@
 &none  &kp HASH            &kp AT              &kp LESS_THAN         &kp GREATER_THAN       &kp TILDE           &kp MINUS  &kp LEFT_BRACE                    &kp RIGHT_BRACE              &kp GRAVE                   &kp COLON                    &none
 &none  &mt LEFT_GUI CARET  &mt LEFT_ALT EQUAL  &mt LCTRL UNDERSCORE  &mt LEFT_SHIFT DOLLAR  &kp ASTERISK        &kp PLUS   &mt RIGHT_SHIFT LEFT_PARENTHESIS  &mt RCTRL RIGHT_PARENTHESIS  &mt RIGHT_ALT LEFT_BRACKET  &mt RIGHT_GUI RIGHT_BRACKET  &none
 &none  &kp BACKSLASH       &kp PIPE            &kp PRCNT             &kp SEMI               &kp SINGLE_QUOTE    &kp DQT    &kp EXCL                          &kp AMPS                     &kp UNDER                   &kp SLASH                    &none
-                                               &trans                &trans                 &kp DELETE          &trans     &trans                            &trans
+                                               &trans                &trans                 &trans              &trans     &trans                            &trans
             >;
         };
 
         number-and-fn {
             bindings = <
-&none  &kp N9             &kp N5       &kp N0         &kp NUMBER_3       &kp N7        &kp N6  &kp NUMBER_2          &kp NUMBER_1       &kp NUMBER_4             &kp N8             &none
-&none  &mt LEFT_GUI EXCL  &mt LALT AT  &mt LCTRL SQT  &mt LEFT_SHIFT F4  &trans        &trans  &mt RIGHT_SHIFT HOME  &mt RCTRL PAGE_UP  &mt RIGHT_ALT PAGE_DOWN  &mt RIGHT_GUI END  &none
-&none  &kp F1             &kp F2       &kp F3         &kp F4             &kp F5        &kp F6  &kp F7                &kp F8             &kp F11                  &kp F12            &none
-                                       &trans         &trans             &kp DELETE    &trans  &trans                &trans
+&none  &kp N9             &kp N5       &kp N0         &kp NUMBER_3       &kp N7    &kp N6  &kp NUMBER_2          &kp NUMBER_1       &kp NUMBER_4             &kp N8             &none
+&none  &mt LEFT_GUI EXCL  &mt LALT AT  &mt LCTRL SQT  &mt LEFT_SHIFT F4  &trans    &trans  &mt RIGHT_SHIFT HOME  &mt RCTRL PAGE_UP  &mt RIGHT_ALT PAGE_DOWN  &mt RIGHT_GUI END  &none
+&none  &kp F1             &kp F2       &kp F3         &kp F4             &kp F5    &kp F6  &kp F7                &kp F8             &kp F11                  &kp F12            &none
+                                       &trans         &trans             &trans    &trans  &trans                &trans
             >;
         };
 
         numpad_arrow {
             bindings = <
-&none  &to 0   &trans    &kp UP_ARROW  &trans     &trans        &kp FSLH      &kp N7              &kp N8        &kp N9       &kp MINUS      &none
-&none  &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans        &kp ASTERISK  &mt RIGHT_SHIFT N4  &mt RCTRL N5  &mt RALT N6  &mt RWIN PLUS  &none
-&none  &trans  &trans    &trans        &trans     &trans        &kp N0        &kp N1              &kp N2        &kp N3       &kp ENTER      &none
-                         &trans        &trans     &kp DELETE    &trans        &trans              &trans
+&none  &to 0   &trans    &kp UP_ARROW  &trans     &trans    &kp FSLH      &kp N7              &kp N8        &kp N9       &kp MINUS      &none
+&none  &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans    &kp ASTERISK  &mt RIGHT_SHIFT N4  &mt RCTRL N5  &mt RALT N6  &mt RWIN PLUS  &none
+&none  &trans  &trans    &trans        &trans     &trans    &kp N0        &kp N1              &kp N2        &kp N3       &kp ENTER      &none
+                         &trans        &trans     &trans    &trans        &trans              &trans
             >;
         };
 
