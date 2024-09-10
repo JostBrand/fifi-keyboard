@@ -109,6 +109,11 @@
             bindings = <&kp TAB>;
             key-positions = <19 18>;
         };
+
+        alt_semi {
+            bindings = <&kp SEMI>;
+            key-positions = <5 4>;
+        };
     };
 
     macros {
@@ -204,6 +209,20 @@
             quick-tap-ms = <200>;
             flavor = "balanced";
         };
+
+        wm_shift_1: wm_shift_1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "WM_SHIFT_1";
+            #binding-cells = <0>;
+            bindings = <&kp LG(NUMBER_1)>, <&kp LS(LG(NUMBER_1))>;
+        };
+
+        wm_shift_2: wm_shift_2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "WM_SHIFT_2";
+            #binding-cells = <0>;
+            bindings = <&kp LG(NUMBER_2)>, <&kp LG(LS(NUMBER_2))>;
+        };
     };
 
     keymap {
@@ -211,7 +230,7 @@
 
         colemak_base {
             bindings = <
-&none  &mt ESCAPE Q       &kp W           &kp F           &kp P             &kp B          &kp J              &mt SEMI L         &german_ue             &kp Y            &mt UNDER MINUS     &none
+&none  &mt ESCAPE Q       &kp W           &kp F           &kp P             &kp B          &kp J              &kp L              &german_ue             &kp Y            &mt UNDER MINUS     &none
 &none  &alt_a LEFT_GUI 0  &mt LEFT_ALT R  &alt_s LCTRL 0  &mt LEFT_SHIFT T  &kp G          &kp M              &mt RIGHT_SHIFT N  &mt RCTRL E            &mt RIGHT_ALT I  &alt_o RIGHT_GUI 0  &none
 &none  &lt 2 Z            &kp X           &kp C           &kp D             &kp V          &kp SLASH          &kp K              &kp H                  &mt COLON COMMA  &lt 2 DOT           &none
                                           &key_repeat     &lt 1 BACKSPACE   &lt 2 SPACE    &exp 3 LEFT_SHIFT  &lt 1 RET          &kp LA(LC(LEFT_META))
@@ -238,10 +257,10 @@
 
         numpad_arrow {
             bindings = <
-&none  &to 0   &trans    &kp UP_ARROW  &trans     &trans    &kp FSLH      &kp N7              &kp N8        &kp N9       &kp MINUS      &none
-&none  &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans    &kp ASTERISK  &mt RIGHT_SHIFT N4  &mt RCTRL N5  &mt RALT N6  &mt RWIN PLUS  &none
-&none  &trans  &trans    &trans        &trans     &trans    &kp N0        &kp N1              &kp N2        &kp N3       &kp ENTER      &none
-                         &trans        &trans     &trans    &trans        &trans              &trans
+&none  &to 0   &trans    &kp UP_ARROW  &trans     &trans    &kp LC(LS(NUMBER_6))  &wm_shift_2         &wm_shift_1   &kp LG(LS(NUMBER_4))  &kp LG(LS(N8))  &none
+&none  &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans    &kp ASTERISK          &mt RIGHT_SHIFT N4  &mt RCTRL N5  &mt RALT N6           &mt RWIN PLUS   &none
+&none  &trans  &trans    &trans        &trans     &trans    &kp N0                &kp N1              &kp N2        &kp N3                &kp ENTER       &none
+                         &trans        &trans     &trans    &trans                &trans              &trans
             >;
         };
 
