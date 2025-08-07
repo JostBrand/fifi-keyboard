@@ -114,6 +114,11 @@
             bindings = <&kp SEMI>;
             key-positions = <5 4>;
         };
+
+        zmk-stud {
+            bindings = <&studio_unlock>;
+            key-positions = <25 13 1>;
+        };
     };
 
     macros {
